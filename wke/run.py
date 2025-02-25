@@ -151,7 +151,7 @@ def _parse_options(target, provided: Optional[dict[str, Any]]) -> tuple[list[str
         if option.choices and value not in option.choices:
             raise ValueError(f'Invalid value set for option "{option.name}". '
                              f'Was `{value}` but allowed choices are '
-                             f'{','.join(option.choices)}.')
+                             f'{",".join(option.choices)}.')
 
         optvec.append(value)
 
